@@ -1,11 +1,10 @@
-// Write your code here
 import {Component} from 'react'
 
 import './index.css'
 
 class MatchCard extends Component {
+  
   // GETTING CLASS NAME FOR WIN / LOSE
-
   getMatchStatusClassName = matchStatus => {
     if (matchStatus === 'Won') {
       return 'match-won'
