@@ -1,7 +1,4 @@
-In this project, let's build an **IPL Dashboard App** by applying the concepts we have learned till now.
 
-
-<br/>
 PROJECT URL : https://myiplpage007.ccbp.tech/
 <br/>
 
@@ -28,26 +25,7 @@ PROJECT URL : https://myiplpage007.ccbp.tech/
 
 ### Completion Instructions
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
 
-The app must have the following functionalities
-
-- When the app is opened, Home Route should be displayed
-- When the Home Route is opened,
-  - Make HTTP GET request to the **teamsApiUrl**
-  - **_loader_** should be displayed while fetching the data
-  - After fetching the data, the list of teams should be displayed
-- When a team card in Home Route is clicked,
-  - Page should be navigated to the Team Matches Route with the URL `/team-matches/:id`
-- When the Team Matches Route is opened,
-  - Make HTTP GET request to the **teamMatchesApiUrl** with the team id to get the recent matches data of the team
-    - Example: `https://apis.ccbp.in/ipl/KKR`
-  - **_loader_** should be displayed while fetching the data
-  - After fetching the data, the team banner, latest match, and list of recent matches should be displayed
-
-</details>
 
 <details>
 
@@ -168,50 +146,6 @@ Use these files to complete the implementation:
 - `src/components/MatchCard/index.css`
 </details>
 
-### Quick Tips
-
-<details>
-<summary>Click to view</summary>
-<br>
-
-- To display the animated loader, we need to import the Loader component using the below statement
-
-  ```
-  import Loader from 'react-loader-spinner'
-  ```
-
-- In order to display the given animated loader, pass the `type` and `color` props to the `Loader` component with values as **Oval** and **#ffffff** , respectively
-
-  ```
-  <Loader type="Oval" color="#ffffff" height={50} width={50} />
-  ```
-
-</details>
-
-### Important Note
-
-<details>
-<summary>Click to view</summary>
-
-<br/>
-
-**The following instructions are required for the tests to pass**
-
-- The banner image in the Team Matches Route should have the alt attribute value as `team banner`
-- The alt attribute values for the images received from the response are given in the **Example response**
-- The API responses received from the given api URLs should be converted to camel case
-- Wrap the `Loader` component with an HTML container element and add the `testid` attribute value as `loader` to it as shown below
-  ```
-  <div testid="loader">
-      <Loader type="Oval" color="#ffffff" height={50} width={50} />
-  </div>
-  ```
-- Render HomeRoute component when path in URL matches `/`
-- Render TeamMatchesRoute component when path in URL matches `/team-matches/:id`
-- No need to use the `BrowserRouter` in `App.js` as we have already included in `index.js` file
-- Each TeamMatchesRoute should have different gradient colors as background based on the selected team
-
-</details>
 
 ### Resources
 
