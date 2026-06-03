@@ -4,7 +4,6 @@ import './index.css'
 
 class MatchCard extends Component {
   
-  // GETTING CLASS NAME FOR WIN / LOSE
   getMatchStatusClassName = matchStatus => {
     if (matchStatus === 'Won') {
       return 'match-won'
@@ -15,8 +14,6 @@ class MatchCard extends Component {
   render() {
     const {matchData} = this.props
     const {competingTeamLogo, competingTeam, matchStatus, result} = matchData
-
-    // CLASS NAME FOR MATCH STATUS
 
     const matchStatusClassName = `match-status ${this.getMatchStatusClassName(
       matchStatus,
