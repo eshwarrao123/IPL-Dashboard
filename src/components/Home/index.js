@@ -16,7 +16,6 @@ class Home extends Component {
     this.getTeams()
   }
 
-  // GETTING ALL THE TEAMS
 
   getTeams = async () => {
     const response = await fetch('https://apis.ccbp.in/ipl')
@@ -29,7 +28,6 @@ class Home extends Component {
     this.setState({teamsList: updatedData, isLoading: false})
   }
 
-  // RENDERING TEAMS FROM TEAMCARD
 
   renderingTeams = () => {
     const {teamsList} = this.state
