@@ -48,8 +48,6 @@ class TeamMatches extends Component {
     this.setState({recentMatchesData: formattedData, isLoading: false})
   }
 
-  // GETTING CLASS NAME BASED ON EACH TEAM/ID
-
   getTeamClassName = () => {
     const {match} = this.props
     const {params} = match
@@ -77,16 +75,12 @@ class TeamMatches extends Component {
     }
   }
 
-  // LOADER
-
   renderLoader = () => (
     // eslint-disable-next-line react/no-unknown-property
     <div testid="loader" className="loader-container">
       <Loader type="Oval" color="#ffffff" height="50" />
     </div>
   )
-
-  // RENDERING TEAM BANNER URL & LATEST MATCH & MATCH CARD
 
   renderTeamMatches = () => {
     const {recentMatchesData} = this.state
